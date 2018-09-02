@@ -36,7 +36,9 @@ public class MainActivity extends Activity {
         listaItens.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(getApplicationContext(), "Teste de clique", Toast.LENGTH_SHORT).show();
+                int codigoPosicao = position;
+                String valorClicado = listaItens.getItemAtPosition(codigoPosicao).toString();
+                Toast.makeText(getApplicationContext(), valorClicado, Toast.LENGTH_SHORT).show();
             }
         });
     }
